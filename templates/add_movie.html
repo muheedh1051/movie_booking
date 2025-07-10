@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add New Movie</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body style="font-family: 'Poppins', sans-serif; padding: 40px; background-color: #f4f4f4;">
+
+  <h2>Add New Movie</h2>
+  <form method="POST">
+    <label>Title:</label><br>
+    <input type="text" name="title" required><br><br>
+
+    <label>Poster Image Path (e.g., assets/interstellar.jpg):</label><br>
+    <input type="text" name="poster" required><br><br>
+
+    <label>Genre/Rating Text:</label><br>
+    <input type="text" name="description" required><br><br>
+
+    <button type="submit" class="btn">Add Movie</button>
+  </form>
+
+  <br><br>
+  <a href="{{ url_for('admin_dashboard') }}" class="btn">🔙 Back to Admin Dashboard</a>
+
+</body>
+</html>

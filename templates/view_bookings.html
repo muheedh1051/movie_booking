@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>All Bookings</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body style="font-family: 'Poppins', sans-serif; padding: 40px; background-color: #f9f9f9;">
+
+  <h2>📋 All User Bookings</h2>
+
+  <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; background-color: white;">
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Movie</th>
+        <th>Show Time</th>
+        <th>Seats</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for booking in bookings %}
+      <tr>
+        <td>{{ booking[0] }}</td>
+        <td>{{ booking[1] }}</td>
+        <td>{{ booking[2] }}</td>
+        <td>{{ booking[3] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <br><br>
+  <a href="{{ url_for('admin_dashboard') }}" class="btn">🔙 Back to Dashboard</a>
+
+</body>
+</html>

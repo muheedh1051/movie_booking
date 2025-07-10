@@ -1,0 +1,58 @@
+<!-- templates/confirmation.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Booking Confirmation</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-image: url('{{ url_for("static", filename="assets/confirmation-bg.jpg") }}');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 50px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .confirmation-box {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 40px;
+      border-radius: 15px;
+      display: inline-block;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .btn {
+      background-color: #ff5c5c;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 20px;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #e04a4a;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="confirmation-box">
+    <h1>🎉 Booking Confirmed!</h1>
+    <p><strong>Movie:</strong> {{ movie[1] }}</p>
+    <p><strong>Show Time:</strong> {{ show_time }}</p>
+    <p><strong>Seats:</strong> {{ seats | join(', ') }}</p>
+    <p><strong>Enjoy your show!</strong></p>
+    <a href="{{ url_for('home') }}" class="btn">Back to Home</a>
+  </div>
+
+</body>
+</html>
