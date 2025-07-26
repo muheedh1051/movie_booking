@@ -20,7 +20,7 @@ AWS_REGION = 'us-east-1'
 USERS_TABLE = 'movie_users'
 MOVIES_TABLE = 'movie_movies'
 BOOKINGS_TABLE = 'movie_bookings'
-SNS_TOPIC_ARN = 'arn:aws:sns:us-east-1:xxxx:movie_magic_alerts'
+SNS_TOPIC_ARN = 'arn:aws:sns:us-east-1:302263074739:movie_system'
 
 # Initialize AWS services
 dynamodb = boto3.resource('dynamodb', region_name=AWS_REGION)
